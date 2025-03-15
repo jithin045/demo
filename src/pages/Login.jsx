@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 
+function Login() {
 
-function Register() {
-    const [status, setStatus] = useState(true)
     return (
         <>
             <div className='d-flex align-items-center justify-content-center w-100' style={{ height: '100vh' }}>
@@ -17,12 +16,8 @@ function Register() {
                             <img className='img-fluid' src="https://cdni.iconscout.com/illustration/premium/thumb/biometric-security-4916162-4092822.png" alt="" />
                         </Col>
                         <Col sm={12} md={6}>
-                            <h3 className='text-dark'>Register</h3>
+                            <h3 className='text-dark'>Login</h3>
                             <div className='mt-4'>
-
-                                <FloatingLabel className='mb-3' controlId="user" label="Username">
-                                    <Form.Control type="text" placeholder="username" />
-                                </FloatingLabel>
                                 <FloatingLabel
                                     controlId="floatingInput"
                                     label="Email address"
@@ -39,7 +34,7 @@ function Register() {
 
                                 <button className='rounded btn' style={{ backgroundColor: '#18898d', color: 'white' }}  >
 
-                                    <span >Register</span>
+                                    <span >Login</span>
 
                                 </button>
 
@@ -47,7 +42,7 @@ function Register() {
 
                                 <button className='btn btn-link' style={{ color: '#18898d' }} >
 
-                                    <Link className='text-dark' to={'login'}><b>Already A User?</b></Link>
+                                    <Link className='text-dark' to={'/'}><b>Are You New Here?</b></Link>
                                 </button>
                             </div>
                         </Col>
@@ -60,4 +55,4 @@ function Register() {
     )
 }
 
-export default Register
+export default Login
